@@ -1,0 +1,20 @@
+<button (click)="show = true">show</button>
+<app-abc>
+  <div>lain</div>
+  <div *ngIf="show" dada>dada</div>
+  <ng-container *ngIf="show" ngProjectAs="[dada]">
+    <div dada>dada</div>
+  </ng-container>
+
+  <div *ngIf="show" class="popo">popo</div>
+  <ng-container *ngIf="show" ngProjectAs=".popo">
+    <div class="popo">popo</div>
+  </ng-container>
+
+  <app-xyz *ngIf="show"></app-xyz>
+  <ng-container *ngIf="show" ngProjectAs="app-xyz">
+    <app-xyz></app-xyz>
+  </ng-container>
+
+</app-abc>
+<router-outlet></router-outlet>
